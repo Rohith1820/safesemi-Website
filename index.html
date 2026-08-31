@@ -595,14 +595,32 @@
       <div class="sec-eyebrow">Get in touch</div>
       <h2 style="margin-bottom:16px;">Request a sample batch</h2>
       <p class="sec-sub" style="margin-bottom:26px;">Tell us your package type and expected volume. We'll come back with a spec proposal and lead time.</p>
-      <form onsubmit="event.preventDefault(); this.querySelector('.sent').style.display='block';">
+      <form id="sampleForm">
         <div class="field"><label for="nm">Name</label><input id="nm" type="text" required></div>
         <div class="field"><label for="co">Company</label><input id="co" type="text" required></div>
         <div class="field"><label for="em">Work email</label><input id="em" type="email" required></div>
         <div class="field"><label for="msg">Package type &amp; expected volume</label><textarea id="msg" rows="4"></textarea></div>
         <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Send Request</button>
-        <p class="sent" style="display:none; margin-top:14px; color:var(--signal); font-size:13.5px;">Thanks &mdash; this form is a preview. Please email us directly for now.</p>
+        <p class="sent" style="display:none; margin-top:14px; color:var(--signal); font-size:13.5px;">Opening your email app with this request pre-filled &mdash; just hit send there to reach us.</p>
       </form>
+      <script>
+        document.getElementById('sampleForm').addEventListener('submit', function(e){
+          e.preventDefault();
+          var name = document.getElementById('nm').value;
+          var company = document.getElementById('co').value;
+          var email = document.getElementById('em').value;
+          var msg = document.getElementById('msg').value;
+          var subject = encodeURIComponent('Sample Request from ' + company);
+          var body = encodeURIComponent(
+            'Name: ' + name + '\n' +
+            'Company: ' + company + '\n' +
+            'Work email: ' + email + '\n\n' +
+            'Package type & expected volume:\n' + msg
+          );
+          window.location.href = 'mailto:safesemi.contact@gmail.com?subject=' + subject + '&body=' + body;
+          this.querySelector('.sent').style.display = 'block';
+        });
+      </script>
     </div>
     <div class="contact-info">
       <div class="line"><span>Email</span><span>safesemi.contact@gmail.com</span></div>
