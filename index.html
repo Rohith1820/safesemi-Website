@@ -595,30 +595,36 @@
       <div class="sec-eyebrow">Get in touch</div>
       <h2 style="margin-bottom:16px;">Request a sample batch</h2>
       <p class="sec-sub" style="margin-bottom:26px;">Tell us your package type and expected volume. We'll come back with a spec proposal and lead time.</p>
-      <form id="sampleForm">
-        <div class="field"><label for="nm">Name</label><input id="nm" type="text" required></div>
-        <div class="field"><label for="co">Company</label><input id="co" type="text" required></div>
-        <div class="field"><label for="em">Work email</label><input id="em" type="email" required></div>
-        <div class="field"><label for="msg">Package type &amp; expected volume</label><textarea id="msg" rows="4"></textarea></div>
+      <form id="sampleForm" action="https://formspree.io/f/xoeqeabn" method="POST">
+        <div class="field"><label for="nm">Name</label><input id="nm" name="name" type="text" required></div>
+        <div class="field"><label for="co">Company</label><input id="co" name="company" type="text" required></div>
+        <div class="field"><label for="em">Work email</label><input id="em" name="email" type="email" required></div>
+        <div class="field"><label for="msg">Package type &amp; expected volume</label><textarea id="msg" name="message" rows="4"></textarea></div>
+        <input type="hidden" name="_subject" value="New Sample Request from SafeSemi website">
         <button type="submit" class="btn-primary" style="border:none; cursor:pointer;">Send Request</button>
-        <p class="sent" style="display:none; margin-top:14px; color:var(--signal); font-size:13.5px;">Opening your email app with this request pre-filled &mdash; just hit send there to reach us.</p>
+        <p class="sent" style="display:none; margin-top:14px; color:var(--signal); font-size:13.5px;">Thanks &mdash; your request has been sent. We'll be in touch within 1&ndash;2 business days.</p>
+        <p class="err" style="display:none; margin-top:14px; color:#c0392b; font-size:13.5px;">Something went wrong sending this &mdash; please email us directly at safesemi.contact@gmail.com instead.</p>
       </form>
       <script>
         document.getElementById('sampleForm').addEventListener('submit', function(e){
           e.preventDefault();
-          var name = document.getElementById('nm').value;
-          var company = document.getElementById('co').value;
-          var email = document.getElementById('em').value;
-          var msg = document.getElementById('msg').value;
-          var subject = encodeURIComponent('Sample Request from ' + company);
-          var body = encodeURIComponent(
-            'Name: ' + name + '\n' +
-            'Company: ' + company + '\n' +
-            'Work email: ' + email + '\n\n' +
-            'Package type & expected volume:\n' + msg
-          );
-          window.location.href = 'mailto:safesemi.contact@gmail.com?subject=' + subject + '&body=' + body;
-          this.querySelector('.sent').style.display = 'block';
+          var form = this;
+          var data = new FormData(form);
+          fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          }).then(function(response){
+            if (response.ok) {
+              form.reset();
+              form.querySelector('.sent').style.display = 'block';
+              form.querySelector('.err').style.display = 'none';
+            } else {
+              form.querySelector('.err').style.display = 'block';
+            }
+          }).catch(function(){
+            form.querySelector('.err').style.display = 'block';
+          });
         });
       </script>
     </div>
