@@ -43,6 +43,8 @@
   nav .wrap{display:flex; align-items:center; justify-content:space-between; height:64px;}
   .logo{font-family:'Space Grotesk'; font-weight:700; font-size:19px; color:var(--ink); display:flex; align-items:center; gap:9px;}
   .logo .mark{width:26px; height:26px; display:inline-block; flex-shrink:0;}
+  .logo .wordmark{display:inline-flex; gap:0; margin:0; padding:0; letter-spacing:0; word-spacing:0; white-space:nowrap; line-height:1;}
+  .logo .wordmark .semi{color:var(--pink); margin:0; padding:0; letter-spacing:0;}
   .navlinks{display:flex; gap:28px; font-size:14px; color:var(--ink-soft);}
   .navlinks a{ margin-right:0; }
   .navlinks a:not(:last-child){ margin-right:28px; }
@@ -235,7 +237,7 @@
         <rect x="24" y="56" width="20" height="20" rx="4" fill="none" stroke="#111315" stroke-width="7"/>
         <rect x="56" y="56" width="20" height="20" rx="4" fill="#C81E68"/>
       </svg>
-      <span class="wordmark">Safe<span style="color:var(--pink)">Semi</span></span>
+      <span class="wordmark">Safe<span class="semi">Semi</span></span>
     </div>
     <div class="navlinks">
       <a href="#products">Products</a>
