@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,11 +33,11 @@
   a{color:inherit; text-decoration:none;}
   .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
   a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{outline:2px solid var(--pink); outline-offset:2px;}
- 
+
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
   }
- 
+
   /* ---------- NAV ---------- */
   nav{ position:sticky; top:0; z-index:50; background:rgba(238,240,241,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
   nav .wrap{display:flex; align-items:center; justify-content:space-between; height:64px;}
@@ -51,15 +50,15 @@
   .navcta{ font-size:13px; padding:9px 18px; border:1px solid var(--ink); border-radius:2px; color:var(--ink); }
   .navcta:hover{ background:var(--ink); color:#fff; }
   @media (max-width:760px){ .navlinks{display:none;} }
- 
+
   /* ---------- HERO ---------- */
   .hero{ padding:80px 0 56px; border-bottom:1px solid var(--line); }
   .hero .wrap{display:grid; grid-template-columns:1.05fr 1fr; gap:52px; align-items:center;}
   @media (max-width:900px){ .hero .wrap{grid-template-columns:1fr;} }
- 
+
   .eyebrow{ font-family:'IBM Plex Mono'; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--pink); margin-bottom:18px; display:flex; align-items:center; gap:10px; }
   .eyebrow::before{content:''; width:16px; height:1px; background:var(--pink); display:inline-block;}
- 
+
   h1{ font-family:'Space Grotesk'; font-size:clamp(32px, 4.4vw, 50px); font-weight:600; letter-spacing:-0.01em; line-height:1.1; color:var(--ink); margin-bottom:20px; }
   h1 em{ font-style:normal; color:var(--pink); }
   .lede{ color:var(--ink-soft); font-size:17px; max-width:480px; margin-bottom:30px;}
@@ -68,7 +67,7 @@
   .btn-primary:hover{ transform:translateY(-1px); box-shadow:0 8px 22px rgba(200,30,104,0.25); }
   .btn-ghost{ border:1px solid var(--ink); font-size:14.5px; padding:14px 26px; border-radius:2px; color:var(--ink); }
   .btn-ghost:hover{ background:var(--ink); color:#fff; }
- 
+
   .blueprint{ position:relative; border:1px solid var(--line); background:
       linear-gradient(rgba(17,19,21,0.05) 1px, transparent 1px) 0 0/24px 24px,
       linear-gradient(90deg, rgba(17,19,21,0.05) 1px, transparent 1px) 0 0/24px 24px,
@@ -78,7 +77,7 @@
   .blueprint svg{ width:100%; height:100%; display:block; }
   .bp-tag{ position:absolute; top:14px; left:16px; font-family:'IBM Plex Mono'; font-size:10.5px; color:var(--ink-soft); letter-spacing:0.05em;}
   .bp-tag2{ position:absolute; bottom:14px; right:16px; font-family:'IBM Plex Mono'; font-size:10.5px; color:var(--pink); letter-spacing:0.03em;}
- 
+
   .dim-line{ stroke:var(--ink-soft); stroke-width:1; stroke-dasharray:3 3; opacity:0.9; }
   .dim-text{ fill:var(--ink-soft); font-family:'IBM Plex Mono'; font-size:9.5px; }
   .tray-outline{ fill:none; stroke:var(--ink); stroke-width:1.6; }
@@ -86,7 +85,7 @@
   .chamfer-note{ fill:var(--pink); font-family:'IBM Plex Mono'; font-size:9px; }
   .draw-anim{ stroke-dasharray:1200; stroke-dashoffset:1200; animation:draw 1.6s ease forwards; }
   @keyframes draw{ to{ stroke-dashoffset:0; } }
- 
+
   /* ---------- STAT STRIP ---------- */
   .stats{ border-bottom:1px solid var(--line); background:var(--panel); }
   .stats .wrap{ display:grid; grid-template-columns:repeat(4,1fr); }
@@ -96,7 +95,7 @@
   @media (max-width:800px){ .stat:nth-child(odd){ border-left:none; padding-left:0; } }
   .stat .num{ font-family:'Space Grotesk'; font-size:28px; font-weight:700; color:var(--pink); }
   .stat .lbl{ font-size:12.5px; color:var(--ink-soft); margin-top:6px; max-width:180px; }
- 
+
   section{ padding:76px 0; border-bottom:1px solid var(--line); }
   .sec-head{ max-width:640px; margin-bottom:44px; }
   .sec-eyebrow{ font-family:'IBM Plex Mono'; font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--pink); margin-bottom:12px; }
@@ -104,7 +103,7 @@
   h3{ color:var(--ink); }
   p{ color:var(--ink-soft); }
   .sec-sub{ color:var(--ink-soft); margin-top:14px; font-size:15.5px; }
- 
+
   /* ---------- ABOUT ---------- */
   .about-grid{ display:grid; grid-template-columns:1.1fr 1fr; gap:48px; }
   @media (max-width:850px){ .about-grid{ grid-template-columns:1fr; } }
@@ -115,7 +114,7 @@
   .fact-card .fl:last-child{ border-bottom:none; }
   .fact-card .fl span:first-child{ color:var(--ink-soft); }
   .fact-card .fl span:last-child{ font-family:'IBM Plex Mono'; font-size:13px; color:var(--ink); text-align:right; }
- 
+
   /* ---------- GAP ---------- */
   .gap-grid{ display:grid; grid-template-columns:1fr 1fr; gap:32px; }
   @media (max-width:800px){ .gap-grid{ grid-template-columns:1fr; } }
@@ -125,7 +124,7 @@
   .gap-card.hot{ border-color:var(--pink); background:var(--pink-soft); }
   .gap-card.hot .k{ color:var(--pink); }
   .gap-card.hot p{ color:#7A1245; }
- 
+
   /* ---------- DATASHEET ---------- */
   .datasheet{ border:1px solid var(--line); border-radius:3px; overflow:hidden; background:var(--panel); }
   .ds-header{ display:flex; justify-content:space-between; align-items:center; padding:16px 24px; border-bottom:1px solid var(--line); background:#F6F7F8; }
@@ -143,7 +142,7 @@
     table.specs tr{ padding:8px 0; display:block; }
   }
   .ds-note{ padding:16px 24px; font-size:13px; color:var(--ink-soft); border-top:1px solid var(--line); background:#F6F7F8; }
- 
+
   /* ---------- ROADMAP ---------- */
   .roadmap{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
   @media (max-width:800px){ .roadmap{ grid-template-columns:1fr; } }
@@ -155,7 +154,7 @@
   .rm-card ul{ list-style:none; margin-top:10px; }
   .rm-card li{ font-size:14px; color:var(--ink-soft); padding:5px 0; padding-left:16px; position:relative; }
   .rm-card li::before{ content:'\2013'; position:absolute; left:0; color:var(--pink); }
- 
+
   /* ---------- WHY GRID ---------- */
   .why-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; border:1px solid var(--line); background:var(--line); border-radius:3px; overflow:hidden; }
   @media (max-width:800px){ .why-grid{ grid-template-columns:1fr; } }
@@ -163,7 +162,7 @@
   .why-item .idx{ font-family:'IBM Plex Mono'; font-size:11px; color:var(--pink); }
   .why-item h3{ font-family:'Space Grotesk'; font-size:18px; margin:12px 0 8px; font-weight:600; }
   .why-item p{ font-size:14px; }
- 
+
   /* ---------- PROCESS ---------- */
   .process{ display:flex; flex-direction:column; }
   .p-row{ display:grid; grid-template-columns:70px 1fr 1fr; gap:24px; padding:20px 0; border-bottom:1px solid var(--line); align-items:start; }
@@ -174,13 +173,13 @@
   .p-desc{ font-size:13.5px; margin-top:4px; }
   .p-status{ font-family:'IBM Plex Mono'; font-size:11.5px; color:var(--ink-soft); text-align:right; padding-top:3px; }
   @media (max-width:700px){ .p-status{ text-align:left; margin-top:6px; } }
- 
+
   /* ---------- FAQ ---------- */
   .faq-item{ border-bottom:1px solid var(--line); padding:20px 0; }
   .faq-item:last-child{ border-bottom:none; }
   .faq-q{ font-weight:600; font-size:15.5px; color:var(--ink); margin-bottom:8px; font-family:'Space Grotesk'; }
   .faq-a{ font-size:14.5px; }
- 
+
   /* ---------- CATALOG ---------- */
   .cat-tabs{ display:flex; gap:10px; margin-bottom:32px; flex-wrap:wrap; }
   .cat-tab{ font-family:'IBM Plex Mono'; font-size:12px; padding:8px 14px; border:1px solid var(--line); border-radius:20px; color:var(--ink-soft); }
@@ -202,14 +201,14 @@
   .prod-attrs .pa{ display:flex; justify-content:space-between; font-size:12.5px; padding:4px 0; }
   .prod-attrs .pa span:first-child{ color:var(--ink-soft); }
   .prod-attrs .pa span:last-child{ font-family:'IBM Plex Mono'; color:var(--ink); }
- 
+
   /* ---------- QUICK CONTACT REP ---------- */
   .rep-card{ display:flex; gap:14px; align-items:flex-start; border:1px solid var(--line); background:var(--panel); border-radius:3px; padding:18px; margin-top:20px; }
   .rep-avatar{ width:44px; height:44px; border-radius:50%; background:var(--pink-soft); color:var(--pink); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk'; font-weight:700; flex-shrink:0; }
   .rep-name{ font-weight:600; font-size:14.5px; }
   .rep-role{ font-size:12.5px; color:var(--ink-soft); margin-bottom:6px; }
   .rep-links{ font-family:'IBM Plex Mono'; font-size:12.5px; color:var(--pink); }
- 
+
   /* ---------- CONTACT ---------- */
   .contact-wrap{ display:grid; grid-template-columns:1fr 1fr; gap:52px; }
   @media (max-width:800px){ .contact-wrap{ grid-template-columns:1fr; } }
@@ -219,13 +218,13 @@
   .field input:focus, .field textarea:focus{ outline:none; border-color:var(--pink); }
   .contact-info .line{ display:flex; gap:14px; padding:13px 0; border-bottom:1px solid var(--line); font-size:14.5px; color:var(--ink); }
   .contact-info .line span:first-child{ color:var(--ink-soft); width:100px; flex-shrink:0; font-family:'IBM Plex Mono'; font-size:12px; padding-top:2px;}
- 
+
   footer{ padding:30px 0; }
   footer .wrap{ display:flex; justify-content:space-between; align-items:center; font-size:12.5px; color:var(--ink-soft); flex-wrap:wrap; gap:10px;}
 </style>
 </head>
 <body>
- 
+
 <nav>
   <div class="wrap">
     <div class="logo">
@@ -236,7 +235,7 @@
         <rect x="24" y="56" width="20" height="20" rx="4" fill="none" stroke="#111315" stroke-width="7"/>
         <rect x="56" y="56" width="20" height="20" rx="4" fill="#C81E68"/>
       </svg>
-      SafeSemi
+      Safe<span style="color:var(--pink)">Semi</span>
     </div>
     <div class="navlinks">
       <a href="#products">Products</a>
@@ -249,7 +248,7 @@
     <a href="#contact" class="navcta">Request a Sample</a>
   </div>
 </nav>
- 
+
 <section class="hero">
   <div class="wrap">
     <div>
@@ -261,7 +260,7 @@
         <a href="#spec" class="btn-ghost">View Spec Sheet</a>
       </div>
     </div>
- 
+
     <div class="blueprint">
       <div class="bp-tag">DWG NO. SS&#8209;JT&#8209;001 &nbsp;/&nbsp; JEP95</div>
       <div class="bp-tag2">MATL: PC&#8209;ESD &nbsp;&middot;&nbsp; STATIC DISSIPATIVE</div>
@@ -293,7 +292,7 @@
     </div>
   </div>
 </section>
- 
+
 <section class="stats" style="padding:0;">
   <div class="wrap">
     <div class="stat"><div class="num">100%</div><div class="lbl">of JEDEC trays used by Indian OSAT/ATMP plants are currently imported</div></div>
@@ -302,7 +301,7 @@
     <div class="stat"><div class="num">&plusmn;0.05mm</div><div class="lbl">cavity tolerance we engineer to, per pocket</div></div>
   </div>
 </section>
- 
+
 <section id="about">
   <div class="wrap about-grid">
     <div class="about-copy">
@@ -324,7 +323,7 @@
     </div>
   </div>
 </section>
- 
+
 <section id="gap">
   <div class="wrap">
     <div class="sec-head">
@@ -344,7 +343,7 @@
     </div>
   </div>
 </section>
- 
+
 <section id="products">
   <div class="wrap">
     <div class="sec-head">
@@ -383,7 +382,7 @@
           </div>
         </div>
       </div>
- 
+
       <div class="prod-card">
         <div class="prod-thumb">
           <span class="soon">IN DEVELOPMENT</span>
@@ -405,7 +404,7 @@
           </div>
         </div>
       </div>
- 
+
       <div class="prod-card">
         <div class="prod-thumb">
           <span class="soon">PLANNED</span>
@@ -433,7 +432,7 @@
     <p style="font-size:12px; color:var(--ink-soft); margin-top:16px;">*Delivery time applies once qualification is complete and a standing trial order is in place. First qualification samples currently take 2&ndash;6 weeks depending on tooling.</p>
   </div>
 </section>
- 
+
 <section id="spec">
   <div class="wrap">
     <div class="sec-head">
@@ -465,7 +464,7 @@
     </div>
   </div>
 </section>
- 
+
 <section id="roadmap">
   <div class="wrap">
     <div class="sec-head">
@@ -498,7 +497,7 @@
     </div>
   </div>
 </section>
- 
+
 <section id="why">
   <div class="wrap">
     <div class="sec-head">
@@ -524,7 +523,7 @@
     </div>
   </div>
 </section>
- 
+
 <section id="process">
   <div class="wrap">
     <div class="sec-head">
@@ -541,7 +540,7 @@
     </div>
   </div>
 </section>
- 
+
 <section id="resources">
   <div class="wrap">
     <div class="sec-head">
@@ -561,7 +560,7 @@
     </div>
   </div>
 </section>
- 
+
 <section id="faq">
   <div class="wrap">
     <div class="sec-head">
@@ -592,7 +591,7 @@
     </div>
   </div>
 </section>
- 
+
 <section id="contact" style="border-bottom:none;">
   <div class="wrap contact-wrap">
     <div>
@@ -638,7 +637,7 @@
       <div class="line"><span>Registration</span><span>MSME / Udyam &mdash; India</span></div>
       <div class="line"><span>Focus</span><span>JEDEC matrix trays &middot; QFN &amp; BGA</span></div>
       <div class="line"><span>Response time</span><span>Within 1&ndash;2 business days</span></div>
- 
+
       <div class="rep-card">
         <div class="rep-avatar">R</div>
         <div>
@@ -650,7 +649,7 @@
     </div>
   </div>
 </section>
- 
+
 <footer>
   <div class="wrap">
     <div style="display:flex; align-items:center; gap:8px;">
@@ -666,16 +665,6 @@
     <div class="mono">JEP95 QUALIFIED DESIGN &middot; MADE IN INDIA</div>
   </div>
 </footer>
- 
+
 </body>
 </html>
- 
-
-
-
-
-
-
-
-
-
